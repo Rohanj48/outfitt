@@ -10,23 +10,30 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
+            background-color:#cfe0e2;
             margin: 0;
             padding: 0;
         }
 
         header {
             height: 100px;
-            background-color: #333;
-            color: #fff;
+            background-color: #43adcc;
+            color: #0a0d0e;
             padding: 10px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+
+            border: 1px solid #0a0d0e;
+            border-radius: 0.6rem;
+
+            
+
         }
 
         h1 {
-            margin: 0;
+            
+            margin: 0vh;
         }
 
         .container {
@@ -57,18 +64,22 @@
 
 
         .image-container {
-            width: 300px;
+            width: 350px;
             /* Adjust image width as needed */
             height: 500px;
             margin: 0 auto 10px auto;
-            padding: 20px;
+            padding: 10px;
             border-radius: 5px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
             /* Optional: subtle shadow */
         }
-
+        .image-container:hover {
+            transform: scale(1.1); 
+        }
         .image-container img {
             border-radius: inherit;
+            height: inherit;
+            width: inherit;
             /* Inherit border-radius from container */
         }
 
@@ -80,13 +91,27 @@
                 /* Stack images vertically on small screens */
             }
         }
+        .linkdiv{
+            color: #0a0d0e;
+            text-decoration: none;
+            font-size: 25px;
+        }
+        a{
+            color: #0a0d0e;
+            text-decoration: none;
+        }
+        h2{
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 50px;
+        }
+
     </style>
 </head>
 
 <body>
     <header>
-        <h1>Tops & Bottoms</h1>
-        <div>
+            <h1 >Tops & Bottoms</h1>
+        <div class = "linkdiv">
             <a href="/showpage">Home</a>
             <a href="/addpage">Upload</a>
             <a href="/randpage">Randomize</a>
@@ -98,12 +123,13 @@
             <div class="c">
                 <div>
                     <h2>Tops</h2>
-
+                    <br>
                     {% for img in toplist %}
-
+                    <br>
                     <div class="image-container">
                         <img src={{img}} alt="Top " class="img-fluid">
                     </div>
+                    <br>
                     {%endfor%}
 
                 </div>
@@ -111,11 +137,13 @@
             <div class="c">
             <div>
                 <h2>Bottoms</h2>
+                <br>
                 {% for img in botlist %}
-
+                <br>
                 <div class="image-container">
                     <img src={{img}} alt="bot " class="img-fluid">
                 </div>
+                <br>
                 {%endfor%}
             </div>
             </div>

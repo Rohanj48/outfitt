@@ -2,8 +2,8 @@ from flask import Flask,render_template,request,jsonify,redirect
 from flask_sqlalchemy import SQLAlchemy
 import os
 import random
-#from rembg import remove 
-#from PIL import Image
+from rembg import remove 
+from PIL import Image
 # setup
 app = Flask(__name__)
 
@@ -43,16 +43,16 @@ def addpage():
             #upload = Upload(fname = files.filename,data = files.read())
             
             
-            files.save(os.path.join("static/bottoms",f"bottom{n_files}{file_extension}")) ##NORMALSAVE
+            #files.save(os.path.join("static/bottoms",f"bottom{n_files}{file_extension}")) ##NORMALSAVE
 
             
             #print(os.path.join("/static/tops", files.filename))
             #return files.filename
 
             """FANCYSAVE"""
-            #imgbg = Image.open(files)
-            #img_no_bg = remove(imgbg)
-            #img_no_bg.save(os.path.join("static/bottoms",f"bottom{n_files}.png"))
+            imgbg = Image.open(files)
+            img_no_bg = remove(imgbg)
+            img_no_bg.save(os.path.join("static/bottoms",f"bottom{n_files}.png"))
             ##
 
         if request.form.get("action") =="topb":
@@ -61,14 +61,14 @@ def addpage():
             files = request.files["topImageFile"]
             file_extension =  os.path.splitext(files.filename)[1]
             #upload = Upload(fname = files.filename,data = files.read())
-            files.save(os.path.join("static/tops",f"top{n_files}{file_extension}")) ##NORMALSAVE
+            #files.save(os.path.join("static/tops",f"top{n_files}{file_extension}")) ##NORMALSAVE
             #print(os.path.join("/static/tops", files.filename))
             #return files.filename
 
             """FANCYSAVE"""
-            #imgbg = Image.open(files)
-            #img_no_bg = remove(imgbg)
-            #img_no_bg.save(os.path.join("static/tops",f"bottom{n_files}.png"))
+            imgbg = Image.open(files)
+            img_no_bg = remove(imgbg)
+            img_no_bg.save(os.path.join("static/tops",f"bottom{n_files}.png"))
             #
 
     return render_template("addpage2.html")
