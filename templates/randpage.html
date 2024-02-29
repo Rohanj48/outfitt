@@ -7,6 +7,7 @@
     <style>
         .top-bar {
             background-color: #333;
+            height:100px;
             color: #fff;
             padding: 10px 20px;
             display: flex;
@@ -23,7 +24,8 @@
             max-height:500px;
             margin: 0 auto 10px auto;
             border-radius: 5px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            padding: 20px; /* Optional: subtle shadow */
         }
 
         .image-container img {
@@ -36,13 +38,47 @@
                 flex-direction: column; /* Stack images vertically on small screens */
             }
         }
+        .txtarea{
+            background-color: #333;
+            width: 400px;
+            height: 740px;
+            color: #fff;
+
+            
+            float : left
+        }
+
+        
     </style>
+
 </head>
 <body>
     <div class="top-bar">
         <h1>Tops & Bottoms</h1>
-        <a href="/randpage">Reload</a> </div>
-    <div class="container">
+        <div>
+            <a href="/showpage">Home</a>
+            <a href="/addpage">Upload</a>
+            <a href="/randpage">Reload</a> </div>
+        </div>
+        
+    <div class="contain">
+        <div class="txtarea">
+            <br/>
+            Complementary Colors: Opposite each other on the color wheel, these create high contrast, ideal for bold statements. 
+            Examples: red and green, blue and orange, yellow and purple.
+            <br/>
+            <br/>
+
+            Analogous Colors: Adjacent on the wheel, they create a harmonious and calming vibe. 
+            Examples: blue, teal, and turquoise, red, orange, and yellow, green, blue-green, and teal.
+            <br/>
+            <br/>
+            Monochromatic: Different shades of the same color offer a classic and elegant look. 
+            Examples: navy, royal blue, and light blue, black, charcoal, and grey, brown, beige, and cream.
+        </div>
+        <div class = "row">
+
+
         <div class="column">
             <div class="col-md-6">
                 
@@ -56,6 +92,8 @@
                 </div>
             </div>
         </div>
+        </div>
+    </div>
     </div>
 </body>
 </html

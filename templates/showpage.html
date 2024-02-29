@@ -41,7 +41,9 @@
         .section h2 {
             text-align: center;
             margin-bottom: 10px;
+            overflow:hidden;
         }
+        
 
         .image-container {
             max-width: 200px; /* Adjust image width as needed */
@@ -67,11 +69,12 @@
         <h1>Tops & Bottoms</h1>
         </header>
     <div class="container">
-        <div class="section">
+
+        <div class="section " class="indent-1" >
             <h2>Tops</h2>
 
             {% for img in toplist %}
-            {{img}}
+
             <div class="image-container">
                 <img src={{img}} alt="Top " class="img-fluid">
             </div>
@@ -81,6 +84,7 @@
         <div class="section">
             <h2>Bottoms</h2>
             {% for img in botlist %}
+
             <div class="image-container">
                 <img src={{img}} alt="bot " class="img-fluid">
             </div>

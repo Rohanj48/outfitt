@@ -1,4 +1,4 @@
-from flask import Flask,render_template,request,jsonify
+from flask import Flask,render_template,request,jsonify,redirect
 from flask_sqlalchemy import SQLAlchemy
 import os
 import random
@@ -26,6 +26,7 @@ class Upload(db.Model):
 #pages
 @app.route('/',methods=['POST', 'GET'])
 def index():
+    return redirect("/showpage")
     return render_template("index.html") 
 
 
@@ -83,7 +84,7 @@ def showpage():
 
     botlist = [i for i in botlist if i != None]
 
-    print(botlist)
+    #print(botlist)
 
     lst = os.listdir("static/tops") 
     topn= len(lst)
@@ -92,14 +93,14 @@ def showpage():
         toplist.append(os.path.join("/static/tops",i))
     
     toplist = [i for i in toplist if i != None]
-    print(toplist)
+    #print(toplist)
 
 
     context ={
         "botlist":botlist,
         "toplist":toplist
     }
-    return render_template("showpage.html",**context)
+    return render_template("showpage2.html",**context)
 
 
 
