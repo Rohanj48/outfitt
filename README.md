@@ -1,10 +1,23 @@
-This repository contains the code for a web application that allows users to:
+# Fashion Outfit Web Application
 
-Browse outfits: Explore a collection of their outfits featuring different tops and bottoms.
-Upload images: Users can upload their own photos and utilize an automatic background removal system for easy outfit creation.
-Random outfit generator: Generate random outfit combinations with color coordination suggestions for inspiration.
+ Fashion Outfit Web Application!
 
-Features:
-Intuitive interface: Easy-to-use browsing and upload functionalities.
-Automatic background removal: Effortlessly remove backgrounds from uploaded images for seamless outfit creation.
-Random outfit generator: Discover new combinations and explore various styles with color-coordinated suggestions.
+## Features
+
+1. **Browse Outfits:** Explore a curated collection of outfits featuring diverse tops and bottoms.
+
+2. **Upload Images:** Upload your personal photos and leverage an Automatic background removal system for effortless outfit creation.
+
+3. **Random Outfit Generator:** Discover inspiration with the random outfit generator, which suggests different outfit combinations and provides color coordination tips.
+
+4. **User-Friendly Interface:** Designed for intuitive browsing and uploading experiences.
+
+5. **Automatic Background Removal:** Effortlessly remove backgrounds from uploaded images, facilitating seamless outfit creation.
+
+6. **Color Coordination Tips:** Spark your creativity with new combinations and explore various styles with color-coordinated suggestions.
+
+## Technologies Used
+
+- HTML/CSS
+- Python/Flask
+
